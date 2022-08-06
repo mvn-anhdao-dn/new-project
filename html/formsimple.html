@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM SIMPLE</title>
+</head>
+<body>
+    <form style="width: 500px;height: 500px;background-color:aquamarine;">
+        <h1 style="background-color: red;height: 50px ; width: 400px; text-align: center;">SỞ THÍCH CỦA BẠN</h1>
+        <label style="color:blue ;">Họ và tên: </label><input type="text" name="yourname"><br>
+        <label style="color:blue ;">Email: </label><input type="email" name="email"><br>
+        <label style="color:blue ;">Sở thích</label>: 
+        <p style="color: orange;">
+            <input type="checkbox" name="hobby"><label for="Thể thao">Thể thao</label>
+            <input type="checkbox" name="hobby"><label for="Lướt web">Lướt web</label>
+            <input type="checkbox" name="hobby"><label for="Du lịch">Du lịch</label><br>
+            <input type="checkbox" name="hobby"><label for="Âm nhạc">Âm nhạc</label>
+            <input type="checkbox" name="hobby"><label for="Chơi game">Chơi game</label>
+            <input type="checkbox" name="hobby"><label for="Đọc sách">Thể thao</label><br>
+            <input type="checkbox" name="hobby"><label for="Điện ảnh">Điện ảnh</label>
+        </p>
+        </label>
+        <button type="submit">Gửi thông tin</button>
+        <button type="reset">Nhập lại</button>
+
+    </form>
+    <hr>
+    <form style="width: 500px;height: 500px; background-color: yellow;">
+        <h1 style="background-color:aquamarine;height: 50px ; width: 400px; text-align: center;">ĐĂNG KÝ HỌC VIÊN</h1>
+        <label style="color:blue ;">Họ và tên: </label><input type="text" name="yourname"><br>
+        <label style="color:blue ;">Ngày sinh: </label><input type="date" name="date"><br>
+        <label style="color:blue ;">Giới tính </label><input type="radio" name="nam">nam<input type="radio" name="nữ">nữ
+        <p>Địa chỉ <br><textarea name="địa chỉ" cols="30" rows="10"></textarea></p>
+        <p>Lớp
+            <select name="Lớp">
+                <option value="1">--Chọn lớp--</option>
+                <option value="2">B1</option>
+                <option value="3">C1</option>
+            </select>
+        </p>
+        <label style="color:blue ;">Email: </label><input type="email" name="email"><br>
+        <label style="color:blue ;">Điện thoại </label><input type="number" name="phone"><br>
+        <button type="submit">Đăng ký</button>
+        <button type="reset">Nhập lại</button>
+
+    </form>
+
+</body>
+</html>
