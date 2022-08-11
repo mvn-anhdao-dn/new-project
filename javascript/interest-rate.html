@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let money = parseFloat(prompt("Nhập số tiền vay: "));
+        let inter = parseFloat(prompt("Nhập lãi suất: "));
+        let n = parseFloat(prompt("Nhập số năm gửi: "));
+        lai = money * inter / 100
+        let tonglai = money + n * lai
+        document.write("Tổng số tiền nhận được là: ");
+        document.write(tonglai)
+
+    </script>
+</body>
+</html>
