@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>Caculator</h1>
+        <input type="number" id="1"> <input type="number" id="2"> <br>
+        <button type="button" onclick="cong()">Additon (+)</button>
+        <button type="button" onclick="tru()">Subtraction (-)</button>
+        <button type="button" onclick="nhan()">Multiplication (*)</button>
+        <button type="button" onclick="chia()">Division (/)</button> <br>
+        <p id="result">Result</p>
+    </form>
+    <script>
+        function cong(){
+            a = parseFloat(document.getElementById("1").value)
+            b = parseFloat(document.getElementById("2").value)
+            total = a + b
+            document.getElementById("result").innerText = "Additon: " + total
+        }
+
+        function tru(){
+            a = parseFloat(document.getElementById("1").value)
+            b = parseFloat(document.getElementById("2").value)
+            total = a - b
+            document.getElementById("result").innerText = "Subtraction: " + total
+        }
+        function nhan(){
+            a = parseFloat(document.getElementById("1").value)
+            b = parseFloat(document.getElementById("2").value)
+            total = a * b
+            document.getElementById("result").innerText = "Multiplication: " +total
+        }
+        function chia(){
+            a = parseFloat(document.getElementById("1").value)
+            b = parseFloat(document.getElementById("2").value)
+            total = a / b
+            document.getElementById("result").innerText = "Division: " + total
+        }
+        
+    </script>
+</body>
+</html>
