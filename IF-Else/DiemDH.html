@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính điểm ĐH khối D</h1>
+    Môn Toán <input type="text" id="1"><br>
+    Môn Văn <input type="text" id="2"><br>
+    Môn Anh <input type="text" id="3"><br>
+    Khu vực <select id="kv">
+        <option value="kv1">KV1</option>
+        <option value="kv2-nt">KV2-NT</option>
+        <option value="kv2">KV2</option>
+        <option value="kv3">KV3</option>
+    </select><br>
+    <button type="button" onclick="tong()">Tính điểm</button>
+    <h3 id="result"></h3>
+</body>
+<script>
+    function tong(){
+        let a = +(document.getElementById("1").value)
+        let b = +(document.getElementById("2").value)
+        let c = +(document.getElementById("3").value)
+        let d = (document.getElementById("kv").value)
+
+        switch(d){
+            case "kv1":
+                document.getElementById("result").innerText = "Tổng điểm đại học khối D của bạn là:" + Number(a + b + c +0.75)
+                break
+            case "kv2-nt":
+                document.getElementById("result").innerText ="Tổng điểm đại học khối D của bạn là:"+ Number(a + b + c + 0.5)
+                break
+            case "kv2":
+                document.getElementById("result").innerText ="Tổng điểm đại học khối D của bạn là:"+ Number(a + b + c + 0.25)
+                break
+            case "kv3":
+                document.getElementById("result").innerText = "Tổng điểm đại học khối D của bạn là:"+Number(a + b + c )
+                break
+        }
+    }
+</script>
+</html>
