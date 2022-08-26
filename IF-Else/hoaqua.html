@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <h1>Giá hoa quả</h1>
+    <input type="text" id="value">
+    <button onclick="xemgia()" type="button">Xem giá</button> <br>
+    <p id="value1"></p>
+    </form>
+    <script>
+        function xemgia(){
+        let a = document.getElementById("value").value
+        switch(a){
+            case "Ổi":
+                document.getElementById("value1").innerText = "20000 VND/kg";
+                break;
+            case "Dưa Hấu":
+                document.getElementById("value1").innerHTML = "20000 VND/kg";
+                break;
+            case "Táo":
+                document.getElementById("value1").innerHTML ="30000 VND/kg";
+                break;
+            case "Xoài":
+                document.getElementById("value1").innerHTML = "30000 VND/kg";
+                break;
+            case "Cam":
+                document.getElementById("value1").innerHTML = "40000 VND/kg";
+                break;
+            case "Chôm Chôm":
+                document.getElementById("value1").innerHTML = "40000 VND/kg";
+                break;
+            case "Măng cụt":
+                document.getElementById("value1").innerHTML = "50000 VND/kg";
+                break;
+        }
+    }
+    </script>
+</body>
+</html>
