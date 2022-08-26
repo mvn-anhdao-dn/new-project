@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Amount</p>
+    <input type="text" id="1">
+
+    <p>From Currency</p>
+    <select id="fc">
+        <option value="usd">USD</option>
+        <option value="vnd">VND</option>
+    </select>
+
+    <p>To Currency</p>
+    <select id="tc">
+        <option value="vnd">VND</option>
+        <option value="usd">USD</option>
+    </select>
+    <button type="button" onclick="test()">Click</button>
+    <p id="result"></p>
+</body>
+<script>
+    function test(){
+        let a = document.getElementById("1").value
+        let b = document.getElementById("fc").value
+        let c = document.getElementById("tc").value
+        if (b == "usd" && c =="vnd"){
+            document.getElementById("result").innerHTML = a * 24000;
+        }else if ( b == "vnd" && c == "usd"){
+            document.getElementById("result").innerHTML = a /24000;
+        }
+    }
+</script>
+</html>
