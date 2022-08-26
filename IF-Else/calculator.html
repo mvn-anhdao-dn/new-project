@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 300px;
+            border: 1px solid;
+        }
+
+        button{
+            width: 45px;
+            border: 0.5 solid;
+            border-radius: 3px;
+        }
+        input{
+            width: 280px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" id="display" value=""></td>
+        </tr>
+        <tr>
+            <td><button onclick="trai()">(</button></td>
+            <td><button onclick="phai()">)</button></td>
+            <td><button onclick="phantram()">%</button></td>
+            <td><button type="reset" onclick="del()">C</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="num7()">7</button></td>
+            <td><button onclick="num8()">8</button></td>
+            <td><button onclick="num9()">9</button></td>
+            <td><button onclick="chia()">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="num4()">4</button></td>
+            <td><button onclick="num5()">5</button></td>
+            <td><button onclick="num6()">6</button></td>
+            <td><button onclick="nhan()">x</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="num1()">1</button></td>
+            <td><button onclick="num2()">2</button></td>
+            <td><button onclick="num3()">3</button></td>
+            <td><button onclick="tru()">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="num0()">0</button></td>
+            <td><button onclick="cham()">.</button></td>
+            <td><button onclick="bang()">=</button></td>
+            <td><button onclick="cong()">+</button></td>
+        </tr>
+    </table>
+</body>
+<script>
+    function num1() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + 1
+    }
+    function num2() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + 2
+    }
+    function num3() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + 3
+    }
+    function num4() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + 4
+    }
+    function num5() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + 5
+    }
+    function num6() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + 6
+    }
+    function num7() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + 7
+    }
+
+    function num8() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + 8
+    }
+
+    function num9() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + 9
+    }
+
+
+    function cong() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + "+"
+    }
+    function tru() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + "-"
+    }
+    function nhan() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + "*"
+    }
+    function chia() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + "/"
+    }
+
+    function bang() {
+        let display = document.getElementById("display").value 
+        let result = eval(display)
+        document.getElementById("display").value = result
+    }
+    function del() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = ""
+    }
+
+    function phantram() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display/100 + "%"
+    }
+    function cham() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + "."
+    }
+    function trai() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display + "("
+    }function phai() {
+        let display = document.getElementById("display").value 
+        document.getElementById("display").value = display +")"
+    }
+</script>
+</html>
+</body>
+</html>
