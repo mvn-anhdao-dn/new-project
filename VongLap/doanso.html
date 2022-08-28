@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><button type="button" onclick="test();">Click</button>
+    <script>
+    function test(){
+            var a ;
+            var b = Math.round(10*Math.random());
+            do{
+                for(i=1;i<4;i++){
+                a = +prompt("Enter your number: ");
+                if (a == b){
+                    alert("Đúng rồi")
+                    break
+                }else if(a > b){
+                    alert("Dự đoán đang lớn hơn")
+                }else{
+                    alert("Dự đoán đang nhỏ hơn")
+                }}
+                break
+            }
+            while(a != b);
+        }
+    </script>
+</body>
+</html>
