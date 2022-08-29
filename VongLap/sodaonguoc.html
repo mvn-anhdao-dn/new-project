@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p>Nhập vào 1 số</p><br><input type="text" id="result"> -->
+    <script>
+    var n = +prompt("Enter your number:")
+    let a ; 
+    let b = 0;
+    while(n!=0){
+        a = n % 10;
+        b = b * 10 + a;
+        n = (n-a) / 10    
+    }
+    document.write(b);
+    </script>
+</body>
+</html>
