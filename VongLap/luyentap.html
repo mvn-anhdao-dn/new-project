@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick=click1()>Bài 1</button>
+    <button onclick=click2()>Bài 2</button>
+    <button onclick=click3()>Bài 3</button>
+    <button onclick=click4()>Bài 4</button>
+    <button onclick=click6()>Bài 6</button>
+    <button onclick=click7()>Bài 7</button>
+    <h1 id="result"></h1>
+</body>
+<script>
+    function click1(){
+        for(let i =1 ; i<100;i++){
+            if(i==99){
+                document.write("Hoàn thành")
+            }
+            document.write(i)
+        }
+    }
+    function click2(){
+        
+        do{
+            let c = +prompt("Nhập thông tin nhiệt độ: ")
+            if(c<20){
+                document.write("Yêu cầu tăng nhiệt độ")
+            }
+            if(c>100){
+                document.write("Yêu cầu giảm nhiệt độ")
+            }
+            if(c>20 && c<100){
+                document.write("Nhiệt độ bình thường")
+            }
+        }while(c!=0)
+    }
+    function click3(){
+        let number = 20
+        let n1 = 0
+        let n2 = 1
+        let nextTerm;
+        let result = 0
+
+        document.write('Fibonacci Series:  <br>');
+
+        for (let i = 1; i <= number; i++) {
+            document.write(n1 + "<br>")
+            result = result +n1
+            nextTerm = n1 + n2;
+            n1 = n2;
+            n2 = nextTerm;
+            
+        }
+        document.write("Tổng của dãy Fibonacci là :" + result)
+    }
+
+    function click4(){
+        ///// Bài 5
+        let number = 20
+        let num1 = 0
+        let num2 = 1
+        let temp
+        let result = 0
+        for (let i = 1; i <= number; i++) {
+            temp = num1 + num2
+            num1 = num2
+            num2 = temp
+            if(temp % 5 == 0){
+                break
+            }
+        }
+        document.write("Số đầu tiên chia hết cho 5 là: " + temp)
+    }
+    function click6(){
+        let n = 0
+        for(let i = 0 ; i < 30;i++){
+            let a = (i*7)
+            document.write(a+",")
+            n = n + a
+            // document.write(n + ",")
+        }
+        document.write("Tổng các số chia hết cho 7: "+n)
+
+    }
+    function click7(){
+        for(let i=1 ; i<100; i++){
+            if(i%15 == 0){
+                document.write(i+" FizzBuzz +<br>")
+            }else if(i%3 ==0){
+                document.write(i+" Fizz +<br>")
+            }else if(i%5 == 0){
+                document.write(i+" Buzz +<br>")
+            }
+        }
+    }
+</script>
+</html>
