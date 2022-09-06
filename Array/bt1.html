@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sample Screen</h1>
+    <input type="text" id="input">
+    <button onclick="add()">Add</button>
+    <button onclick="display()">Display</button>
+    <h4 id="result"></h4>
+</body>
+<script>
+    let x = 0;
+    let array = Array()
+    function add(){
+        array[x] = document.getElementById("input").value;
+        alert("Element: " + array[x] + " Added at index: " + x)
+        x++;
+        document.getElementById("input").value = "" //gán rỗng cho thẻ input
+    }
+    function display(){
+        let e = ""
+        for (i = 0 ; i < array.length ; i++){
+            e += "Element " + i + " = " + array[i] + "<br>"
+            // e += array[i] + "<br>"
+        }
+        document.getElementById("result").innerHTML = e
+    }
+</script>
+</html>
