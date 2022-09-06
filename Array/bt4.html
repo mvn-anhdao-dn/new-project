@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    
+    function findMin(array){
+        var min  = array[0]
+        for( var i = 0; i < array.length ; ++i){
+            if(min > array[i]){
+                min = array[i]
+            }
+        }
+        return min;
+    }
+    function findMax(array){
+        var max  = array[0]
+        for( var i = 0; i < array.length ; ++i){
+            if(max < array[i]){
+                max = array[i]
+            }
+        }
+        return max;
+    }
+
+
+    var num = [];
+    for(var i = 0 ; i < 100 ; i++){
+        num[i] = Math.floor(Math.random() * 101);
+    }
+    var minValue = findMin(num);
+    document.write("Giá trị nhỏ nhất của mảng là : " + minValue + "<br>")
+    
+    var maxValue = findMax(num);
+    document.write("Giá trị lớn nhất của mảng là : " + maxValue)
+
+</script>
+</html>
