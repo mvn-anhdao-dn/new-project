@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onchange=inputValue(this.value)>Nhập nhanh cái tay vào
+</body>
+<script>
+    // let arr = ["Polaris", Aldebaran, Deneb, Vega, Altair, Dubhe, Regulus];
+    // let arr2 = ["Ursa Minor", Tarurus, Cygnus, Lyra, Aquila, "Ursa Major" , Leo]
+    
+    function inputValue(a){
+        let arr = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" , "Leo"]
+        if(a.length == 0){
+            alert("Fail")
+        }else{
+            for(let i = 0 ; i < arr.length ; i++){
+                if(a == arr[i]){
+                let b = arr2[i];
+                alert(b)
+            }
+        }
+    }}
+    // inputValue("Polaris")
+
+</script>
+</html>

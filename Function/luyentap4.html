@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onchange=Cal(this.value)> Nhập nhanh cái tay vào
+</body>
+<script>
+    function Cal(r){
+        if(r<0){
+            return -1;
+        }else{
+            alert("Chu vi nè ku: " + r*2*3.14 + "cm")
+            alert("Diện tích nè ku: "+ r**2*3.14 + "cm")
+        }
+    }
+</script>
+</html>
