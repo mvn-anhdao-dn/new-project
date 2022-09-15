@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="foot" oninput="footToMetter(this.value)">Foot<br>
+    <input type="number" name="" id="metter" oninput="metterToFoot(this.value)">Metter<br>
+    <p id="result"></p>
+</body>
+<script>
+    let arr = [1,2,3,4]
+
+    function footToMetter(foot){
+        foot = parseFloat(foot)
+        document.getElementById("result").innerHTML = foot * 0.305 + "metter"
+    }
+
+    function metterToFoot(metter){
+        metter = parseFloat(metter)
+        document.getElementById("result").innerHTML = metter * 3.279 + "foot"
+    }
+
+</script>
+</html>
