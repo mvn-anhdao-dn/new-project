@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Battery{
+        energy
+        constructor(energy){
+            this.energy = energy
+        }
+
+        getEnergy(){
+            return this.energy
+        }
+
+        setEnergy(newEnergy){
+            this.energy = newEnergy
+        }
+        decrease(){
+            this.energy--;
+        }
+        increase(){
+            this.energy++;
+        }
+    }
+
+    class FlashLamp{
+        status
+        battery
+        constructor(battery){
+            this.status = false;
+            this.battery = battery
+        }
+        getBattery(){
+            return this.battery.getEnergy()
+        }
+        setBattery(newBattery){
+            this.battery = newBattery
+        }
+        setEnergyOfBattery(energy){
+            this.battery.energy = energy;
+        }
+        light(){
+            if(this.status){
+                document.write("Lighting  <br>")
+            }else{
+                document.write("Not Lighting  <br>")
+            }
+        }
+
+        turnOn(){
+            this.status = true;
+            this.battery.decrease()
+        }
+        turnOff(){
+            this.status = false
+        }
+        charge(){
+            while(this.battery.getEnergy()< 100){
+                this.battery.increase()
+            }
+            document.write("Đã nạp đầy pin <br>")
+        }
+    }
+
+    let b = new Battery(100)
+    let f = new FlashLamp(b)
+
+    function main(){
+        f.setEnergyOfBattery(50)
+        f.light()
+        document.write(f.getBattery() + "<br>")
+        f.turnOn()
+        // f.turnOn()
+        // f.turnOn()
+        f.light()
+        document.write(f.getBattery()+"<br>")
+        f.turnOff()
+        f.light()
+        document.write(f.getBattery()+"<br>")
+        f.charge()
+        document.write(f.getBattery()+"<br>")
+    }
+
+    main();
+</script>
+</html>
