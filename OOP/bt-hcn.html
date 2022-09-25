@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="Mycanvas"></canvas>
+</body>
+<script>
+    let ctx = document.getElementById("Mycanvas").getContext("2d")
+
+    class Rectangle{
+        long
+        weight
+        constructor(long,weight){
+            this.long = long
+            this.weight = weight
+        }
+        getCircuit(){
+            return (this.long + this.weight)*2
+        }
+        getArea(){
+            return this.long * this.weight
+        }
+    }
+
+    let a = new Rectangle(100,200)
+    console.log(a.getCircuit())
+    console.log(a.getArea())
+
+    ctx.fillRect(100,100,a.long,a.weight)
+</script>
+</html>
