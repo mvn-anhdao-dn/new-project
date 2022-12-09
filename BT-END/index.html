@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sản phẩm</title>
+</head>
+
+
+
+<body>
+<header>
+
+    <div class="logo">
+        <a href=""><img src="https://hoayeuthuong.com/images/logo-hoa-yeu-thuong.png" alt="logoShop"></a>
+    </div>
+    <div class="find">
+            <input type="text" name="search" placeholder="Search.." id="input-find">
+    </div>
+    <div> <button type="button" id="btn-find" onclick="searchProduct()">Tìm</button></div>
+    <div class="lh">
+        <button class="btn-login"> <a href="login.html"> Đăng nhập</a></button>
+        <button class="btn-login"> <a href="dangki.html">Đăng kí ngay</a> </button>
+    </div>
+</header>
+<nav class="nav-main">
+    <ul>
+        <li><a href="">Trang chủ</a></li>
+        <li><a href="">Giới thiệu</a></li>
+        <li><a href="">Sản phẩm</a></li>
+        <li><a href="">Dịch vụ</a></li>
+        <li><a href="">Tin tức</a></li>
+        <li><a href="">Video</a></li>
+        <li><a href="">Thư viện ảnh</a></li>
+        <li><a href="">Liên hệ</a></li>
+    </ul>
+</nav>
+<div class="title-main">
+
+    <div class="title-sanpham">
+        <a href="">Trang chủ</a>
+    </div>
+    <div class="title-sanpham">
+        <span> <strong>></strong> </span>
+    </div>
+    <div id="title-sanpham1">
+        <a href="">Sản phẩm</a>
+    </div>
+</div>
+<main>
+    <div class="main-left">
+        <div class="menu-product">
+            <span>MENU SẢN PHẨM</span>
+            <div class="line1">
+                <span class="line"></span>
+            </div>
+            <div class="list-danhmuc">
+                <ul>
+                    <li><a href="">Bánh Sinh Nhật</a></li>
+                    <li><a href="">Bánh Ngọt</a></li>
+                    <li><a href="">Bánh Kem Tươi</a></li>
+                    <li><a href="">Bánh Hoa Quả</a></li>
+                    <li><a href="">Bánh Sự Kiện</a></li>
+                    <li><a href="">Bánh Tết</a></li>
+                    <li><a href="">Bánh Trung Thu</a></li>
+                    <li><a href="">Bánh Mì</a></li>
+                    <li><a href="">Chocolate</a></li>
+                    <li><a href="">Giỏ Quà</a></li>
+                </ul>
+            </div>
+            <span>LỌC THEO GIÁ</span>
+            <div class="list-danhmuc">
+                <ul>
+                    <li><input type="checkbox" id="price50"  value="1" onchange="filterProduct50()"><label for="price50">
+                        50k-100k</label></li>
+                    <li><input type="checkbox" id="price100"  value="2" onchange="filterProduct100()"><label for="price100">
+                        100k-300k</label></li>
+
+                    <li><input type="checkbox" id="price300"  value="3" onchange="filterProduct300()" ><label
+                            for="price300">
+                        300k-500k</label></li>
+
+                    <li><input type="checkbox" id="price500"  value="4" onchange="filterProduct500()"><label for="price500">
+                        500k-1triệu</label></li>
+                </ul>
+            </div>
+
+            <span>KÍCH THƯỚC</span>
+            <div class="list-danhmuc">
+                <ul>
+                    <li><input type="checkbox" id="small" value="1" onchange="filterSmall()"><label for="small">
+                        Nhỏ</label></li>
+                    <li><input type="checkbox" id="fit" value="2" onchange="filterFit()"><label for="fit">
+                        Vừa</label></li>
+                    <li><input type="checkbox" id="big"  value="3" onchange="filterBig()"><label  for="big">
+                        Lớn</label></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-right">
+        <div class="title-listsp"><span>Danh Sách Sản Phẩm</span></div>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="/image/banner3.png" style="width:1030px" height="370px">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="/image/banner8.png" style="width:1030px" height="370px">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="/image/banner2.png" style="width:1030px" height="370px">
+
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class="product-sort">
+            <select  id="sapxep-sanpham" onchange="sortProduct()">
+                <option value="1" >-------Chọn sắp xếp-------- </option>
+                <option id="high" value="high">Sắp xếp theo giá từ cao đến thấp </option>
+                <option id="low" value="low">Sắp xếp theo giá từ thâp đến cao</option>
+            </select>
+        </div>
+
+        <div id="add">
+            <button id="btn-add" onclick="addProductDisplay()">Thêm sản phẩm</button>
+        </div>
+
+        <div id="add-product" ></div>
+
+
+        <div id="displayElement" >
+
+        </div>
+
+    </div>
+</main>
+<footer>
+    <div class="logo-thuonghieu">
+        <div class="logo-img"><a href=""><img src="image/16.png" alt="" width="150"></a></div>
+        <div class="logo-img"><a href=""><img src="image/17.png" alt="" width="150"></a></div>
+        <div class="logo-img"><a href=""><img src="image/18.png" alt="" width="150"></a></div>
+        <div class="logo-img"><a href=""><img src="image/19.png" alt="" width="150"></a></div>
+        <div class="logo-img"><a href=""><img src="image/20.png" alt="" width="150"></a></div>
+        <div class="logo-img"><a href=""><img src="image/21.png" alt="" width="150"></a></div>
+    </div>
+    <div class="information">
+        <nav class="lienhe">
+            <ul>
+                <div class="title-information"><span>Cake House</span></div>
+                <li>Số 66 Lê Thanh Nghị, Bách Khoa, Hai Bà Trưng</li>
+                <li>Hotline: 0247 108 7878 exit 108</li>
+                <li>Email: Admin1234@gmail.com</li>
+                <li><a href=""><img src="image/logo.png" alt=""></a></li>
+            </ul>
+        </nav>
+        <nav class="dichvu">
+            <ul>
+                <div class="title-information"><span>Dịch Vụ</span></div>
+                <li><a href=""> Dịch Vụ Đặt Tiệc Sinh Nhật</a></li>
+                <li><a href="">Dịch Vụ Đặt Tiệc Ngọt Giáng Sinh</a></li>
+                <li><a href="">Dịch Vụ Đặt Teabreak Cao Cấp, Sang Trọng</a></li>
+                <li><a href="">Dịch Vụ Đặt Tiệc Ngọt Tân Niên </a></li>
+            </ul>
+        </nav>
+        <div class="thongke">
+            <div class="title-information"><span>Thống Kê Truy Cập</span></div>
+            <div class="thongke2">
+                <nav class="thongke-text">
+                    <ul>
+                        <li>Tổng lượt truy cập:</li>
+                        <li>Trong Ngày:</li>
+                        <li>Đang trực tuyến:</li>
+                        <li>Trong tuần:</li>
+                        <li>Trong tháng:</li>
+                        <li>Trong năm:</li>
+                    </ul>
+                </nav>
+                <nav class="thongke-number">
+                    <ul>
+                        <li>4248</li>
+                        <li>166</li>
+                        <li>10</li>
+                        <li>166</li>
+                        <li>2067</li>
+                        <li>3479</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src="Model/product.js"></script>
+<script src="main.js"></script>
+
+</html>
